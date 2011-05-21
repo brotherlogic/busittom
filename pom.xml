@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>uk.co.brotherlogic.busittom</groupId>
   <artifactId>busittomcat</artifactId>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
   <version>0.1-SNAPSHOT</version>
   <name>busittomcat</name>
   <url>http://maven.apache.org</url>
@@ -22,6 +22,14 @@
   
   
   <dependencies>
+
+    <!-- BusIt lib -->
+    <dependency>
+      <groupId>uk.co.brotherlogic</groupId>
+      <artifactId>busitlib</artifactId>
+      <version>0.2</version>
+    </dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -54,7 +62,7 @@
       <plugin>
         <groupId>org.mortbay.jetty</groupId>
         <artifactId>jetty-maven-plugin</artifactId>
-	<version> 8.0.0.M2</version>
+	<version> 7.0.0.pre5</version>
       </plugin>
       
       <plugin>
@@ -88,6 +96,7 @@
         <version>1.0</version>
         <configuration>
           <server>myserver</server>
+	  <url>http://edip:8085/manager</url>
         </configuration>
       </plugin>
 
