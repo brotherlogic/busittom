@@ -30,6 +30,19 @@
       <version>0.2</version>
     </dependency>
 
+
+    <!-- Jersey Stuff -->
+    <dependency>
+      <groupId>com.sun.jersey</groupId>
+      <artifactId>jersey-server</artifactId>
+      <version>1.7-ea07</version>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.grizzly</groupId>
+      <artifactId>grizzly-servlet-webserver</artifactId>
+      <version>2.0.0-M3</version>
+    </dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -62,7 +75,7 @@
       <plugin>
         <groupId>org.mortbay.jetty</groupId>
         <artifactId>jetty-maven-plugin</artifactId>
-	<version> 7.0.0.pre5</version>
+	<version>7.0.0.pre5</version>
       </plugin>
       
       <plugin>
@@ -78,7 +91,7 @@
               </includes>
             </resource>
             <resource>
-              <directory>src/resources/</directory>
+              <directory>src/main/resources/</directory>
               <targetPath>WEB-INF/resources/</targetPath>
               <includes>
                 <include>**/*</include>
